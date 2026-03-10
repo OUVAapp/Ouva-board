@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ouva — Board</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-hover: #1c2333;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #2f81f7;
+    --green: #3fb950;
+    --orange: #d29922;
+    --red: #f85149;
+    --purple: #bc8cff;
+    --pink: #f778ba;
+    --gerard: #2f81f7;
+    --jeshanth: #da7756;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+  }
+
+  header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header h1 span { font-size: 24px; }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .avatar-g { background: var(--gerard); }
+  .avatar-j { background: var(--jeshanth); }
+  .avatar-e { background: var(--purple); }
+
+  .legend {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .board {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    overflow-x: auto;
+    min-height: calc(100vh - 80px);
+    align-items: flex-start;
+  }
+
+  .column {
+    min-width: 300px;
+    max-width: 300px;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .column-header {
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .column-header .count {
+    background: var(--border);
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+
+  .column-header .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dot-backlog { background: var(--text-muted); }
+  .dot-todo { background: var(--accent); }
+  .dot-progress { background: var(--orange); }
+  .dot-review { background: var(--purple); }
+  .dot-done { background: var(--green); }
+
+  .column-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card {
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    cursor: grab;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+    border: 1px solid;
+  }
+
+  .tag-feat { color: var(--green); border-color: #1a4d2e; background: #0d2818; }
+  .tag-bug { color: var(--red); border-color: #5c1a1a; background: #2d1013; }
+  .tag-infra { color: var(--orange); border-color: #4d3519; background: #2a1d0e; }
+  .tag-test { color: var(--purple); border-color: #3d2a5c; background: #1e1430; }
+  .tag-api { color: #79c0ff; border-color: #1a3a5c; background: #0d1f30; }
+  .tag-web { color: var(--pink); border-color: #5c1a42; background: #2d1022; }
+  .tag-mobile { color: #7ee787; border-color: #1a4d2e; background: #0d2818; }
+  .tag-p0 { color: var(--red); border-color: #5c1a1a; background: #2d1013; }
+  .tag-p1 { color: var(--orange); border-color: #4d3519; background: #2a1d0e; }
+  .tag-p2 { color: var(--text-muted); border-color: var(--border); background: var(--surface); }
+
+  .card-assignees {
+    display: flex;
+    gap: -4px;
+  }
+
+  .card-assignees .avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    margin-left: -4px;
+  }
+
+  .card-assignees .avatar:first-child { margin-left: 0; }
+
+  .card-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  /* Drag and drop */
+  .card.dragging { opacity: 0.4; transform: rotate(2deg); }
+  .column-body.drag-over { background: rgba(47, 129, 247, 0.05); border-radius: 8px; min-height: 60px; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .board { padding: 12px; gap: 12px; }
+    .column { min-width: 260px; max-width: 260px; }
+    header { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1><span>📋</span> Ouva Board</h1>
+  <div class="header-right">
+    <div class="legend">
+      <div class="legend-item"><div class="avatar avatar-g">G</div> Gérard</div>
+      <div class="legend-item"><div class="avatar avatar-j">J</div> Jeshanth</div>
+      <div class="legend-item"><div class="avatar avatar-e">E</div> Emily</div>
+    </div>
+  </div>
+</header>
+
+<div class="board" id="board"></div>
+
+<script>
+const TASKS = [
+  // BACKLOG
+  { id: 'FEAT-009', title: 'Survey lifecycle (draft/active/closed)', desc: 'États du sondage, verrouillage des choix quand votes existent', tags: ['feat', 'api', 'mobile', 'p1'], assignees: ['G', 'E'], status: 'backlog' },
+  { id: 'FEAT-007', title: 'Catégories & tri des events', desc: 'Demandé par Valentin — WSJF 3.0', tags: ['feat', 'mobile', 'p2'], assignees: ['J'], status: 'backlog' },
+  { id: 'BUG-001', title: 'Clavier cache email (reset password)', desc: 'Le clavier couvre le champ email sur la page reset password', tags: ['bug', 'mobile', 'p2'], assignees: ['J'], status: 'backlog' },
+  { id: 'BUG-002', title: 'Modification sondage pas sauvegardée', desc: 'Les modifications de sondage ne persistent pas', tags: ['bug', 'mobile', 'p1'], assignees: ['G', 'E'], status: 'backlog' },
+  { id: 'INFRA-001', title: 'Firebase Spark → Blaze', desc: 'Migration Firebase + évaluation Render', tags: ['infra', 'p2'], assignees: ['G'], status: 'backlog' },
+
+  // TODO
+  { id: 'FEAT-006-MERGE', title: 'Merge roles & permissions (Flutter)', desc: 'Merger feat/roles-permissions → develop après review Jeshanth', tags: ['feat', 'mobile', 'p0'], assignees: ['J', 'G'], status: 'todo' },
+  { id: 'BUG-005', title: 'Notification click → page blanche', desc: 'Deep linking Android depuis push notification', tags: ['bug', 'mobile', 'p0'], assignees: ['G', 'E'], status: 'todo' },
+  { id: 'BUG-007', title: 'Crash app via lien partage sondage', desc: 'WhatsApp deep link crash — intent filters ou route Flutter', tags: ['bug', 'mobile', 'p1'], assignees: ['G', 'E'], status: 'todo' },
+  { id: 'API-MERGE', title: 'Merge dev → main (ouva_core)', desc: 'Roles & permissions + created_by + auto organizer', tags: ['api', 'p0'], assignees: ['G'], status: 'todo' },
+  { id: 'PLAY-STORE', title: 'Google Play — 20 testeurs × 14 jours', desc: 'Recruter et suivre les testeurs pour accès production', tags: ['infra', 'p0'], assignees: ['G', 'J'], status: 'todo' },
+
+  // IN PROGRESS
+  { id: 'BUG-006', title: 'Participants disparus à la création', desc: 'Fix placeholders + update nickname — fix/bug-006-participants-lost', tags: ['bug', 'mobile', 'p0'], assignees: ['G', 'E'], status: 'progress' },
+  { id: 'FIX-SAMSUNG', title: 'Samsung S25 navbar overlap', desc: 'SafeArea + bottom sheet padding — fix/samsung-navbar-overlap', tags: ['bug', 'mobile', 'p1'], assignees: ['G', 'E'], status: 'progress' },
+  { id: 'FIX-TESTS', title: 'Fix tests intégration (déjà connecté)', desc: 'fix/integration-tests-already-logged', tags: ['test', 'mobile', 'p1'], assignees: ['E'], status: 'progress' },
+
+  // REVIEW
+  { id: 'FEAT-006-WEB', title: 'Roles & permissions (Web)', desc: 'Implémenté sur dev — RoleBadge, PermissionGate, ParticipantManager', tags: ['feat', 'web'], assignees: ['G', 'E'], status: 'review' },
+  { id: 'FEAT-006-API', title: 'Roles & permissions (API)', desc: '34 tests, enum, middleware, endpoints — sur dev', tags: ['feat', 'api'], assignees: ['G', 'E'], status: 'review' },
+
+  // DONE
+  { id: 'FCM-WEB', title: 'Push notifications (Web)', desc: 'FCM service worker + hooks — mergé sur main', tags: ['feat', 'web'], assignees: ['G', 'E'], status: 'done' },
+  { id: 'FCM-API', title: 'Push notifications (API)', desc: 'Device tokens + push on item creation — sur main', tags: ['feat', 'api'], assignees: ['G', 'E'], status: 'done' },
+  { id: 'FCM-MOBILE', title: 'Push notifications (Mobile)', desc: 'FCM intégré, notifications foreground + background', tags: ['feat', 'mobile'], assignees: ['J'], status: 'done' },
+  { id: 'FEAT-006-FLUTTER', title: 'Roles & permissions (Flutter)', desc: 'Enum, PermissionHelper, RoleBadge, 71+ tests', tags: ['feat', 'mobile'], assignees: ['G', 'E'], status: 'done' },
+  { id: 'SPECTATEUR', title: 'Rename Lecteur → Spectateur', desc: 'Web + Mobile + API', tags: ['feat'], assignees: ['G', 'E'], status: 'done' },
+  { id: 'SNACKBAR', title: 'Permission snackbar (remplace boutons masqués)', desc: '13 fichiers modifiés, SnackBar au lieu de masquer', tags: ['feat', 'mobile'], assignees: ['G', 'E'], status: 'done' },
+  { id: 'CREATED-BY', title: 'Exposer created_by sur tous les schemas', desc: 'Event, Activity, Accommodation, Transport, Task, Expense', tags: ['feat', 'api'], assignees: ['G', 'E'], status: 'done' },
+];
+
+const COLUMNS = [
+  { id: 'backlog', label: 'Backlog', dot: 'dot-backlog' },
+  { id: 'todo', label: 'To Do', dot: 'dot-todo' },
+  { id: 'progress', label: 'In Progress', dot: 'dot-progress' },
+  { id: 'review', label: 'Review', dot: 'dot-review' },
+  { id: 'done', label: 'Done', dot: 'dot-done' },
+];
+
+function getAvatarClass(a) {
+  if (a === 'G') return 'avatar-g';
+  if (a === 'J') return 'avatar-j';
+  return 'avatar-e';
+}
+
+function renderCard(task) {
+  const tags = task.tags.map(t => `<span class="tag tag-${t}">${t}</span>`).join('');
+  const assignees = task.assignees.map(a =>
+    `<div class="avatar ${getAvatarClass(a)}">${a}</div>`
+  ).join('');
+
+  return `
+    <div class="card" draggable="true" data-id="${task.id}">
+      <div class="card-title">${task.id} — ${task.title}</div>
+      ${task.desc ? `<div class="card-desc">${task.desc}</div>` : ''}
+      <div class="card-meta">
+        <div class="card-tags">${tags}</div>
+        <div class="card-assignees">${assignees}</div>
+      </div>
+    </div>
+  `;
+}
+
+function render() {
+  // Load saved state
+  const saved = JSON.parse(localStorage.getItem('ouva-board') || '{}');
+  TASKS.forEach(t => { if (saved[t.id]) t.status = saved[t.id]; });
+
+  const board = document.getElementById('board');
+  board.innerHTML = COLUMNS.map(col => {
+    const tasks = TASKS.filter(t => t.status === col.id);
+    return `
+      <div class="column">
+        <div class="column-header">
+          <div class="dot ${col.dot}"></div>
+          ${col.label}
+          <span class="count">${tasks.length}</span>
+        </div>
+        <div class="column-body" data-status="${col.id}">
+          ${tasks.map(renderCard).join('')}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Setup drag & drop
+  setupDragDrop();
+}
+
+function saveState() {
+  const state = {};
+  TASKS.forEach(t => state[t.id] = t.status);
+  localStorage.setItem('ouva-board', JSON.stringify(state));
+}
+
+function setupDragDrop() {
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('dragstart', e => {
+      card.classList.add('dragging');
+      e.dataTransfer.setData('text/plain', card.dataset.id);
+    });
+    card.addEventListener('dragend', () => card.classList.remove('dragging'));
+  });
+
+  document.querySelectorAll('.column-body').forEach(col => {
+    col.addEventListener('dragover', e => {
+      e.preventDefault();
+      col.classList.add('drag-over');
+    });
+    col.addEventListener('dragleave', () => col.classList.remove('drag-over'));
+    col.addEventListener('drop', e => {
+      e.preventDefault();
+      col.classList.remove('drag-over');
+      const id = e.dataTransfer.getData('text/plain');
+      const task = TASKS.find(t => t.id === id);
+      if (task) {
+        task.status = col.dataset.status;
+        saveState();
+        render();
+      }
+    });
+  });
+}
+
+render();
+</script>
+</body>
+</html>
