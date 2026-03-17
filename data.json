@@ -1,0 +1,178 @@
+[
+  {
+    "id": "BUG-008",
+    "title": "Notification deep linking → page blanche",
+    "desc": "Deep linking Android depuis push notification",
+    "tags": ["bug", "mobile", "p0"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-003",
+    "title": "Deep link crash depuis WhatsApp",
+    "desc": "Intent filters ou route Flutter — crash à l'ouverture",
+    "tags": ["bug", "mobile", "p1"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-001",
+    "title": "Clavier cache email (reset password)",
+    "desc": "Le clavier couvre le champ email sur la page reset password",
+    "tags": ["bug", "mobile", "p2"],
+    "assignees": ["J"],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-009",
+    "title": "Survey lifecycle (draft/active/closed)",
+    "desc": "États du sondage, verrouillage des choix quand votes existent",
+    "tags": ["feat", "api", "mobile", "p1"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "INFRA-001",
+    "title": "Firebase Spark → Blaze",
+    "desc": "Migration Firebase + évaluation Render",
+    "tags": ["infra", "p2"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-011",
+    "title": "Expense crash prod — dropdown participants",
+    "desc": "Crash sur events.ouva.app pendant scroll 'Payé par' avec ~15+ participants",
+    "tags": ["bug", "web", "p1"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-008",
+    "title": "Item ↔ Tâche linking",
+    "desc": "Lier items (activité/transport/hébergement) à des tâches — relation N:M",
+    "tags": ["feat", "api", "mobile", "web"],
+    "assignees": ["G", "J"],
+    "status": "spec"
+  },
+  {
+    "id": "FEAT-010",
+    "title": "Permission denied UX (Web)",
+    "desc": "Show-with-feedback pattern — PermissionBanner, snackbar au lieu de masquer",
+    "tags": ["feat", "web"],
+    "assignees": ["G"],
+    "status": "spec"
+  },
+  {
+    "id": "FEAT-006-MERGE-WEB",
+    "title": "Merge collaborative-edit (Web)",
+    "desc": "Branche feat/collaborative-edit-web → dev — 29 tests",
+    "tags": ["feat", "web"],
+    "assignees": ["G"],
+    "status": "todo"
+  },
+  {
+    "id": "FEAT-006-MERGE-MOBILE",
+    "title": "Merge roles & permissions (Flutter)",
+    "desc": "Branche feat/roles-permissions → develop — rebase en cours",
+    "tags": ["feat", "mobile"],
+    "assignees": ["J"],
+    "status": "todo"
+  },
+  {
+    "id": "BUG-009",
+    "title": "Shopping list quantity/unit not editable",
+    "desc": "Branche fix/bug-009-shopping-edit — prêt à merger",
+    "tags": ["bug", "mobile"],
+    "assignees": ["G"],
+    "status": "todo"
+  },
+  {
+    "id": "FIX-SURVEY",
+    "title": "Survey edit choices (Flutter)",
+    "desc": "Branche fix/survey-edit-choices — choix pas sauvés, type verrouillé, form pas fermé",
+    "tags": ["bug", "mobile"],
+    "assignees": ["G"],
+    "status": "todo"
+  },
+  {
+    "id": "INFRA-002",
+    "title": "Set WEBAPP_BASE_URL sur Render",
+    "desc": "Prod: events.ouva.app — Dev: ouva-event-dev.onrender.com",
+    "tags": ["infra", "api"],
+    "assignees": ["G"],
+    "status": "todo"
+  },
+  {
+    "id": "FEAT-007",
+    "title": "Item ↔ Dépense linking (API)",
+    "desc": "4 endpoints link-expense — branche feat/item-expense-linking, 16 tests",
+    "tags": ["feat", "api"],
+    "assignees": ["G"],
+    "status": "progress"
+  },
+  {
+    "id": "FEAT-007-MOBILE",
+    "title": "Item ↔ Dépense linking (Flutter)",
+    "desc": "Bottom sheet post-création, ExpenseLinkCard, QuickExpenseForm",
+    "tags": ["feat", "mobile"],
+    "assignees": ["J"],
+    "status": "progress"
+  },
+  {
+    "id": "FEAT-006-REVIEW-API",
+    "title": "Roles & permissions (API)",
+    "desc": "34 tests, enum, middleware, endpoints — sur dev, prêt pour main",
+    "tags": ["feat", "api"],
+    "assignees": ["G"],
+    "status": "review"
+  },
+  {
+    "id": "FEAT-CREATOR",
+    "title": "Display creator name (Mobile + Web)",
+    "desc": "creator_name_helper.dart + getCreatorName.ts — sur develop/dev",
+    "tags": ["feat", "mobile", "web"],
+    "assignees": ["G"],
+    "status": "done"
+  },
+  {
+    "id": "FEAT-OG",
+    "title": "OG Preview pour partage sondage",
+    "desc": "API og.py + web handleShare — 9 tests, sur dev",
+    "tags": ["feat", "api", "web"],
+    "assignees": ["G"],
+    "status": "done"
+  },
+  {
+    "id": "FEAT-COLLAB-API",
+    "title": "Collaborative edit (API)",
+    "desc": "Toggle collaborative_edit sur tous les items — mergé sur dev",
+    "tags": ["feat", "api"],
+    "assignees": ["G"],
+    "status": "done"
+  },
+  {
+    "id": "FEAT-NOTIF-ROLE",
+    "title": "Role change notification (API)",
+    "desc": "Notification quand un rôle change — mergé sur dev",
+    "tags": ["feat", "api"],
+    "assignees": ["G"],
+    "status": "done"
+  },
+  {
+    "id": "FEAT-SURVEY-CLOSE",
+    "title": "Survey close/reopen (API)",
+    "desc": "Endpoints close/reopen sondage — mergé sur dev",
+    "tags": ["feat", "api"],
+    "assignees": ["G"],
+    "status": "done"
+  },
+  {
+    "id": "BUG-010",
+    "title": "Shopping list quantity shared between items",
+    "desc": "Quantité partagée entre items — fix mergé sur dev (web)",
+    "tags": ["bug", "web"],
+    "assignees": ["G"],
+    "status": "done"
+  }
+]
