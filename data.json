@@ -1,16 +1,56 @@
 [
   {
+    "id": "BUG-005",
+    "title": "Notif rappel event → page blanche",
+    "desc": "Clic sur notif rappel d'event ouvre une page blanche — deep linking Android",
+    "tags": ["bug", "mobile", "p0"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
     "id": "BUG-008",
-    "title": "Notification deep linking → page blanche",
-    "desc": "Deep linking Android depuis push notification",
+    "title": "Notif click → dernière page au lieu du contenu",
+    "desc": "L'app s'ouvre mais ne navigue pas vers le bon contenu — même famille BUG-003/005",
     "tags": ["bug", "mobile", "p0"],
     "assignees": ["G"],
     "status": "backlog"
   },
   {
     "id": "BUG-003",
-    "title": "Deep link crash depuis WhatsApp",
-    "desc": "Intent filters ou route Flutter — crash à l'ouverture",
+    "title": "Notif click → pas de redirection",
+    "desc": "Clic sur notification ne redirige pas vers l'élément concerné",
+    "tags": ["bug", "mobile", "p1"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-007",
+    "title": "Deep link WhatsApp → crash app",
+    "desc": "Lien partage sondage via WhatsApp cause ANR (app ne répond pas)",
+    "tags": ["bug", "mobile", "p1"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-006",
+    "title": "Participants disparus overnight",
+    "desc": "Noms saisis la veille disparus — perte de données intermittente",
+    "tags": ["bug", "mobile", "p1"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-011",
+    "title": "Expense crash — dropdown participants",
+    "desc": "Crash events.ouva.app pendant scroll 'Payé par' avec ~15+ participants",
+    "tags": ["bug", "web", "p1"],
+    "assignees": ["G"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-002",
+    "title": "Modif sondage pas sauvegardée",
+    "desc": "Modifications de sondage ne persistent pas (intermittent)",
     "tags": ["bug", "mobile", "p1"],
     "assignees": ["G"],
     "status": "backlog"
@@ -21,6 +61,134 @@
     "desc": "Le clavier couvre le champ email sur la page reset password",
     "tags": ["bug", "mobile", "p2"],
     "assignees": ["J"],
+    "status": "backlog"
+  },
+  {
+    "id": "BUG-012",
+    "title": "Date fin < date début possible (activités)",
+    "desc": "DatePicker de fin sans contrainte firstDate — Android",
+    "tags": ["bug", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-010",
+    "title": "Bouton retour accueil dans navigation",
+    "desc": "Éviter plusieurs retours arrière pour revenir à l'accueil — WSJF 6.0",
+    "tags": ["feat", "mobile", "p1"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-007",
+    "title": "Catégories / tri / filtrage des events",
+    "desc": "Organiser les events sur l'accueil — WSJF 3.0. Demandé par Valentin",
+    "tags": ["feat", "mobile", "p1"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-012",
+    "title": "Archiver un événement",
+    "desc": "Conserver les infos après fin sans encombrer l'accueil — WSJF 3.5",
+    "tags": ["feat", "mobile", "api", "p1"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-008",
+    "title": "Champ lien internet sur activités",
+    "desc": "Lien vers le site de l'activité directement dans l'app — WSJF 3.0",
+    "tags": ["feat", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-009",
+    "title": "Ajout au calendrier natif",
+    "desc": "Event Ouva → calendrier natif avec deep link retour — WSJF 3.0",
+    "tags": ["feat", "mobile", "p1"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-015",
+    "title": "Filtre sondages répondu/non répondu",
+    "desc": "Distinguer les sondages complétés — WSJF 3.0",
+    "tags": ["feat", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-001",
+    "title": "Calendrier : date début event par défaut",
+    "desc": "Ouvrir le calendrier sur la date de début de l'event — WSJF 3.0",
+    "tags": ["feat", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-003",
+    "title": "Notifications push sur téléphone",
+    "desc": "Push natif pour engagement — WSJF 2.4. DÉJÀ IMPLÉMENTÉ (FCM)",
+    "tags": ["feat", "mobile"],
+    "assignees": [],
+    "status": "done"
+  },
+  {
+    "id": "FEAT-FB-004",
+    "title": "Sous-rubrique date pour déplacer un event",
+    "desc": "Déplacer rapidement un event — WSJF 2.0",
+    "tags": ["feat", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-013",
+    "title": "Son propre solde en premier (dépenses)",
+    "desc": "Épingler son propre remboursement en haut de la liste — WSJF 2.0",
+    "tags": ["feat", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-005",
+    "title": "Conversion multi-devises (type Tricount)",
+    "desc": "Gestion de devises différentes pour les events à l'étranger — WSJF 1.8",
+    "tags": ["feat", "mobile", "api", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-011",
+    "title": "Autocomplétion adresse + identité visuelle",
+    "desc": "Google Places API + couleurs DA — WSJF 1.5. Partie DA recoupe FEAT-FB-002",
+    "tags": ["feat", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-014",
+    "title": "Masquer/muter un event (surprise)",
+    "desc": "Masquer un event + mute notifs par event — WSJF 1.33",
+    "tags": ["feat", "mobile", "api", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-002",
+    "title": "Refonte DA / interface plus esthétique",
+    "desc": "Améliorer UX et mémorabilité — WSJF 1.0. Gros chantier",
+    "tags": ["feat", "mobile", "web", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-006",
+    "title": "Chatbot intégré dans l'app",
+    "desc": "Poser des questions sur un event sans naviguer — WSJF 0.8",
+    "tags": ["feat", "mobile", "api", "p2"],
+    "assignees": [],
     "status": "backlog"
   },
   {
@@ -40,25 +208,17 @@
     "status": "backlog"
   },
   {
-    "id": "BUG-012",
-    "title": "Date fin < date début possible (activités)",
-    "desc": "Formulaire création/modif activité permet de sélectionner une date de fin antérieure à la date de début — manque contrainte firstDate sur DatePicker",
-    "tags": ["bug", "mobile", "p2"],
-    "assignees": [],
-    "status": "backlog"
-  },
-  {
-    "id": "BUG-011",
-    "title": "Expense crash prod — dropdown participants",
-    "desc": "Crash sur events.ouva.app pendant scroll 'Payé par' avec ~15+ participants",
-    "tags": ["bug", "web", "p1"],
+    "id": "STRAT-001",
+    "title": "Configuration stratégique Ouva",
+    "desc": "Gouvernance, roadmap, marketing, modèle éco, financement",
+    "tags": ["infra", "p1"],
     "assignees": ["G"],
     "status": "backlog"
   },
   {
     "id": "FEAT-008",
     "title": "Item ↔ Tâche linking",
-    "desc": "Lier items (activité/transport/hébergement) à des tâches — relation N:M",
+    "desc": "Lier items à des tâches — relation N:M",
     "tags": ["feat", "api", "mobile", "web"],
     "assignees": ["G", "J"],
     "status": "spec"
@@ -66,7 +226,7 @@
   {
     "id": "FEAT-010",
     "title": "Permission denied UX (Web)",
-    "desc": "Show-with-feedback pattern — PermissionBanner, snackbar au lieu de masquer",
+    "desc": "Show-with-feedback pattern — PermissionBanner, snackbar",
     "tags": ["feat", "web"],
     "assignees": ["G"],
     "status": "spec"
@@ -90,7 +250,7 @@
   {
     "id": "FIX-SURVEY",
     "title": "Survey edit choices (Flutter)",
-    "desc": "Branche fix/survey-edit-choices — choix pas sauvés, type verrouillé, form pas fermé",
+    "desc": "Branche fix/survey-edit-choices — choix pas sauvés, type verrouillé",
     "tags": ["bug", "mobile"],
     "assignees": ["G"],
     "status": "todo"
@@ -129,8 +289,8 @@
   },
   {
     "id": "FEAT-EMOJI",
-    "title": "Activity emoji field",
-    "desc": "Branche feat/activity-emoji — ajout champ emoji sur les activités. Review Jeshanth",
+    "title": "Activity emoji field (Flutter)",
+    "desc": "Branche feat/activity-emoji — review Jeshanth",
     "tags": ["feat", "mobile"],
     "assignees": ["G"],
     "status": "review"
@@ -138,7 +298,7 @@
   {
     "id": "FEAT-006-REVIEW-MOBILE",
     "title": "Roles & permissions (Flutter)",
-    "desc": "Branche feat/roles-permissions — Enum, PermissionHelper, RoleBadge, 71+ tests. Review Jeshanth",
+    "desc": "Branche feat/roles-permissions — 71+ tests. Review Jeshanth",
     "tags": ["feat", "mobile"],
     "assignees": ["G"],
     "status": "review"
@@ -146,7 +306,7 @@
   {
     "id": "FEAT-CREATOR",
     "title": "Display creator name (Mobile + Web)",
-    "desc": "creator_name_helper.dart + getCreatorName.ts — sur develop/dev",
+    "desc": "creator_name_helper.dart + getCreatorName.ts",
     "tags": ["feat", "mobile", "web"],
     "assignees": ["G"],
     "status": "done"
@@ -154,7 +314,7 @@
   {
     "id": "FEAT-OG",
     "title": "OG Preview pour partage sondage",
-    "desc": "API og.py + web handleShare — 9 tests, sur dev",
+    "desc": "API og.py + web handleShare — 9 tests",
     "tags": ["feat", "api", "web"],
     "assignees": ["G"],
     "status": "done"
@@ -185,8 +345,16 @@
   },
   {
     "id": "BUG-010",
-    "title": "Shopping list quantity shared between items",
-    "desc": "Quantité partagée entre items — fix mergé sur dev (web)",
+    "title": "Shopping list quantity shared (Web)",
+    "desc": "Quantité partagée entre items — fix mergé sur dev",
+    "tags": ["bug", "web"],
+    "assignees": ["G"],
+    "status": "done"
+  },
+  {
+    "id": "BUG-004",
+    "title": "Scroll impossible sur certains écrans (Web)",
+    "desc": "Liste notifications tronquée — fixé",
     "tags": ["bug", "web"],
     "assignees": ["G"],
     "status": "done"
