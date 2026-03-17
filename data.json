@@ -40,6 +40,14 @@
     "status": "backlog"
   },
   {
+    "id": "BUG-012",
+    "title": "Date fin < date début possible (activités)",
+    "desc": "Formulaire création/modif activité permet de sélectionner une date de fin antérieure à la date de début — manque contrainte firstDate sur DatePicker",
+    "tags": ["bug", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
     "id": "BUG-011",
     "title": "Expense crash prod — dropdown participants",
     "desc": "Crash sur events.ouva.app pendant scroll 'Payé par' avec ~15+ participants",
@@ -69,14 +77,6 @@
     "desc": "Branche feat/collaborative-edit-web → dev — 29 tests",
     "tags": ["feat", "web"],
     "assignees": ["G"],
-    "status": "todo"
-  },
-  {
-    "id": "FEAT-006-MERGE-MOBILE",
-    "title": "Merge roles & permissions (Flutter)",
-    "desc": "Branche feat/roles-permissions → develop — rebase en cours",
-    "tags": ["feat", "mobile"],
-    "assignees": ["J"],
     "status": "todo"
   },
   {
@@ -124,6 +124,22 @@
     "title": "Roles & permissions (API)",
     "desc": "34 tests, enum, middleware, endpoints — sur dev, prêt pour main",
     "tags": ["feat", "api"],
+    "assignees": ["G"],
+    "status": "review"
+  },
+  {
+    "id": "FEAT-EMOJI",
+    "title": "Activity emoji field",
+    "desc": "Branche feat/activity-emoji — ajout champ emoji sur les activités. Review Jeshanth",
+    "tags": ["feat", "mobile"],
+    "assignees": ["G"],
+    "status": "review"
+  },
+  {
+    "id": "FEAT-006-REVIEW-MOBILE",
+    "title": "Roles & permissions (Flutter)",
+    "desc": "Branche feat/roles-permissions — Enum, PermissionHelper, RoleBadge, 71+ tests. Review Jeshanth",
+    "tags": ["feat", "mobile"],
     "assignees": ["G"],
     "status": "review"
   },
