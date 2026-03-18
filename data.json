@@ -192,6 +192,14 @@
     "status": "backlog"
   },
   {
+    "id": "FEAT-FB-016",
+    "title": "Autocomplétion adresse (type Maps/Waze)",
+    "desc": "Suggestions adresse complètes lors de la saisie — WSJF 2.0. 2ème demande (recoupe FEAT-FB-011). Google Places API.",
+    "tags": ["feat", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
     "id": "FEAT-009",
     "title": "Survey lifecycle (draft/active/closed)",
     "desc": "États du sondage, verrouillage des choix quand votes existent",
