@@ -72,6 +72,14 @@
     "status": "backlog"
   },
   {
+    "id": "BUG-013",
+    "title": "Notif rappel remboursement → pas de redirection",
+    "desc": "Clic notif rappel remboursement ne redirige pas — même famille BUG-003/005/008",
+    "tags": ["bug", "mobile", "p1"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
     "id": "FEAT-FB-010",
     "title": "Bouton retour accueil dans navigation",
     "desc": "Éviter plusieurs retours arrière pour revenir à l'accueil — WSJF 6.0",
