@@ -80,6 +80,14 @@
     "status": "backlog"
   },
   {
+    "id": "BUG-014",
+    "title": "Filtre par nom dépenses ne fonctionne pas",
+    "desc": "Clic sur un nom dans la rubrique dépenses ne filtre pas — Android",
+    "tags": ["bug", "mobile", "p2"],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
     "id": "FEAT-FB-010",
     "title": "Bouton retour accueil dans navigation",
     "desc": "Éviter plusieurs retours arrière pour revenir à l'accueil — WSJF 6.0",
