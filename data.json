@@ -2,7 +2,7 @@
   {
     "id": "BUG-005",
     "title": "Notif rappel event → page blanche",
-    "desc": "Clic sur notif rappel d'event ouvre une page blanche — deep linking Android",
+    "desc": "Clic sur notif rappel d'event ouvre une page blanche — deep linking Android — ROOT CAUSE: Navigation helper sans timeout + stack push cassé + cold start non géré",
     "tags": [
       "bug",
       "mobile",
@@ -11,12 +11,12 @@
     "assignees": [
       "G"
     ],
-    "status": "backlog"
+    "status": "spec"
   },
   {
     "id": "BUG-008",
     "title": "Notif click → dernière page au lieu du contenu",
-    "desc": "L'app s'ouvre mais ne navigue pas vers le bon contenu — même famille BUG-003/005",
+    "desc": "L'app s'ouvre mais ne navigue pas vers le bon contenu — même famille BUG-003/005 — ROOT CAUSE: Navigation helper sans timeout + stack push cassé + cold start non géré",
     "tags": [
       "bug",
       "mobile",
@@ -25,12 +25,12 @@
     "assignees": [
       "G"
     ],
-    "status": "backlog"
+    "status": "spec"
   },
   {
     "id": "BUG-003",
     "title": "Notif click → pas de redirection",
-    "desc": "Clic sur notification ne redirige pas vers l'élément concerné",
+    "desc": "Clic sur notification ne redirige pas vers l'élément concerné — ROOT CAUSE: Navigation helper sans timeout + stack push cassé + cold start non géré",
     "tags": [
       "bug",
       "mobile",
@@ -39,12 +39,12 @@
     "assignees": [
       "G"
     ],
-    "status": "backlog"
+    "status": "spec"
   },
   {
     "id": "BUG-007",
     "title": "Deep link WhatsApp → crash app",
-    "desc": "Lien partage sondage via WhatsApp cause ANR (app ne répond pas)",
+    "desc": "Lien partage sondage via WhatsApp cause ANR (app ne répond pas) — ROOT CAUSE: Navigation helper sans timeout + stack push cassé + cold start non géré",
     "tags": [
       "bug",
       "mobile",
@@ -53,7 +53,7 @@
     "assignees": [
       "G"
     ],
-    "status": "backlog"
+    "status": "spec"
   },
   {
     "id": "BUG-006",
@@ -126,14 +126,14 @@
   {
     "id": "BUG-013",
     "title": "Notif rappel remboursement → pas de redirection",
-    "desc": "Clic notif rappel remboursement ne redirige pas — même famille BUG-003/005/008",
+    "desc": "Clic notif rappel remboursement ne redirige pas — même famille BUG-003/005/008 — ROOT CAUSE: Navigation helper sans timeout + stack push cassé + cold start non géré",
     "tags": [
       "bug",
       "mobile",
       "p1"
     ],
     "assignees": [],
-    "status": "backlog"
+    "status": "spec"
   },
   {
     "id": "BUG-014",
