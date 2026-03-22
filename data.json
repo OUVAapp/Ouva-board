@@ -636,5 +636,19 @@
       "G"
     ],
     "status": "progress"
+  },
+  {
+    "id": "BUG-015",
+    "title": "Clavier cache le champ de saisie (iPhone) — Rejoindre event",
+    "desc": "Sur iPhone, le clavier cache le champ de saisie quand on rejoint un event existant. Rapporté par piacenza.enzo@orange.fr le 22/03.",
+    "tags": [
+      "bug",
+      "mobile",
+      "p0"
+    ],
+    "assignees": [
+      "J"
+    ],
+    "status": "todo"
   }
 ]
