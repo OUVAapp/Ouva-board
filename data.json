@@ -148,6 +148,18 @@
     "status": "backlog"
   },
   {
+    "id": "BUG-016",
+    "title": "Boutons suivant/précédent sondage ne fonctionnent pas",
+    "desc": "Sur la page détails d'un sondage, les boutons suivant/précédent ne marchent pas — impossible de naviguer entre sondages. Android.",
+    "tags": [
+      "bug",
+      "mobile",
+      "p2"
+    ],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
     "id": "FEAT-FB-010",
     "title": "Bouton retour accueil dans navigation",
     "desc": "Éviter plusieurs retours arrière pour revenir à l'accueil — WSJF 6.0",
