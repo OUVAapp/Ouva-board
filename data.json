@@ -216,13 +216,15 @@
   {
     "id": "FEAT-FB-009",
     "title": "Ajout au calendrier natif",
-    "desc": "Event Ouva → calendrier natif avec deep link retour — WSJF 3.0",
+    "desc": "Sync auto one-way Ouva → Calendrier natif (Apple/Google). Chaque CRUD activité/transport/hébergement crée/modifie/supprime un event dans le calendrier. Package device_calendar. Stocker calendarEventId par item. Pas de rappels (déjà gérés par l'app). Pas de sync retour.",
     "tags": [
       "feat",
       "mobile",
       "p1"
     ],
-    "assignees": [],
+    "assignees": [
+      "J"
+    ],
     "status": "backlog"
   },
   {
@@ -679,5 +681,33 @@
     ],
     "assignees": [],
     "status": "backlog"
+  },
+  {
+    "id": "FEAT-UX-CREATE",
+    "title": "Refonte UX création d'items (style Apple Invites)",
+    "desc": "Refonte complète des formulaires de création (events, activités, transports, hébergements, dépenses).\n\n## UI — Cartes empilées (style Apple Invites)\n- Scroll vertical de cartes indépendantes, chaque carte = une section\n- Pas de fond dégradé, on garde le design system Ouva (cards, dark mode compatible)\n- Event: carte titre (gros texte), carte dates, carte participants, carte description\n- Activité: carte titre+emoji, carte dates/heures, carte lieu, carte prix+payeur\n- Transport/hébergement: même principe adapté\n- Modification = formulaire classique inchangé\n\n## V2 — Texte libre + ML Kit\n- Champ texte unique en alternative: l'utilisateur écrit naturellement (ex: 'Resto pizza samedi 25€')\n- google_mlkit_entity_extraction parse dates/montants/lieux (offline, gratuit, FR+EN)\n- Logique maison déduit le type + titre\n- Écran de confirmation avec cartes pré-remplies modifiables\n\nInspiration: Apple Invites (screenshot ref dans le chat)",
+    "tags": [
+      "feat",
+      "mobile",
+      "p1"
+    ],
+    "assignees": [
+      "J"
+    ],
+    "status": "spec"
+  },
+  {
+    "id": "BUG-018",
+    "title": "Lien app web dev pointe vers mauvaise URL",
+    "desc": "Le lien vers l'app web dev utilise https://ouva-event-plan.onrender.com/ au lieu de https://ouva-event-dev.onrender.com — à corriger dans les dart-defines / env de dev",
+    "tags": [
+      "bug",
+      "mobile",
+      "p1"
+    ],
+    "assignees": [
+      "J"
+    ],
+    "status": "todo"
   }
 ]
