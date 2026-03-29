@@ -11,7 +11,7 @@
     "assignees": [
       "G"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "BUG-008",
@@ -123,7 +123,7 @@
     "assignees": [
       "J"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "BUG-013",
@@ -162,7 +162,7 @@
     "assignees": [
       "J"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "FEAT-FB-010",
@@ -495,7 +495,7 @@
     "assignees": [
       "G"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "FEAT-007-MOBILE",
@@ -508,7 +508,7 @@
     "assignees": [
       "J"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "FEAT-006-REVIEW-API",
@@ -521,7 +521,7 @@
     "assignees": [
       "G"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "FEAT-EMOJI",
@@ -534,7 +534,7 @@
     "assignees": [
       "G"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "FEAT-006-REVIEW-MOBILE",
@@ -547,7 +547,7 @@
     "assignees": [
       "G"
     ],
-    "status": "review"
+    "status": "done"
   },
   {
     "id": "FEAT-CREATOR",
@@ -679,8 +679,10 @@
       "mobile",
       "p2"
     ],
-    "assignees": [],
-    "status": "backlog"
+    "assignees": [
+      "J"
+    ],
+    "status": "review"
   },
   {
     "id": "FEAT-UX-CREATE",
@@ -700,6 +702,20 @@
     "id": "BUG-018",
     "title": "Lien app web dev pointe vers mauvaise URL",
     "desc": "Le lien vers l'app web dev utilise https://ouva-event-plan.onrender.com/ au lieu de https://ouva-event-dev.onrender.com — à corriger dans les dart-defines / env de dev",
+    "tags": [
+      "bug",
+      "mobile",
+      "p1"
+    ],
+    "assignees": [
+      "J"
+    ],
+    "status": "todo"
+  },
+  {
+    "id": "BUG-019",
+    "title": "Retirer le bandeau orange \"Vous êtes déjà participant\"",
+    "desc": "Le bandeau orange \"Vous êtes déjà participant de cet événement !\" s'affiche en bas de l'écran event details même quand on est l'organisateur. C'est intrusif et peut faire peur. À retirer ou remplacer par quelque chose de plus discret.",
     "tags": [
       "bug",
       "mobile",
