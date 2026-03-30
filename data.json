@@ -753,5 +753,19 @@
       "G"
     ],
     "status": "in_progress"
+  },
+  {
+    "id": "BUG-022",
+    "title": "Web: dates sans heure décalées de J-1 (timezone UTC)",
+    "desc": "Lors de la création ou modification d'une activité avec une date sans heure, la date enregistrée est J-1. Probable conversion UTC qui décale d'un jour (ex: 30 mars 00:00 CEST → 29 mars 22:00 UTC). À vérifier sur tous les items avec dates: activités, logements, transports, tâches (deadline). Fix: envoyer les dates sans conversion timezone ou forcer midi UTC.",
+    "tags": [
+      "bug",
+      "web",
+      "p0"
+    ],
+    "assignees": [
+      "G"
+    ],
+    "status": "in_progress"
   }
 ]
