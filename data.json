@@ -25,7 +25,7 @@
     "assignees": [
       "G"
     ],
-    "status": "spec"
+    "status": "done"
   },
   {
     "id": "BUG-003",
@@ -39,7 +39,7 @@
     "assignees": [
       "G"
     ],
-    "status": "spec"
+    "status": "done"
   },
   {
     "id": "BUG-007",
@@ -53,7 +53,7 @@
     "assignees": [
       "G"
     ],
-    "status": "spec"
+    "status": "done"
   },
   {
     "id": "BUG-006",
@@ -135,7 +135,7 @@
       "p1"
     ],
     "assignees": [],
-    "status": "spec"
+    "status": "done"
   },
   {
     "id": "BUG-014",
