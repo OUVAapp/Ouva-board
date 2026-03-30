@@ -725,5 +725,17 @@
       "J"
     ],
     "status": "todo"
+  },
+  {
+    "id": "BUG-020",
+    "title": "Dates activité web pas sauvegardées",
+    "desc": "Sur le site web, les modifications de dates dans l'onglet activité ne s'enregistrent pas. Bug BLOQUANT. Rapporté par Debra le 27/03. Feedback ID: BUG-017.",
+    "tags": [
+      "bug",
+      "web",
+      "p0"
+    ],
+    "assignees": [],
+    "status": "backlog"
   }
 ]
