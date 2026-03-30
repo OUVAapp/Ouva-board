@@ -443,7 +443,7 @@
     "assignees": [
       "G"
     ],
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": "BUG-009",
@@ -456,7 +456,7 @@
     "assignees": [
       "G"
     ],
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": "FIX-SURVEY",
@@ -469,7 +469,7 @@
     "assignees": [
       "G"
     ],
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": "INFRA-002",
@@ -482,7 +482,7 @@
     "assignees": [
       "G"
     ],
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": "FEAT-007",
