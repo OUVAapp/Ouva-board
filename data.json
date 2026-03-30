@@ -752,7 +752,7 @@
     "assignees": [
       "G"
     ],
-    "status": "in_progress"
+    "status": "done"
   },
   {
     "id": "BUG-022",
@@ -766,6 +766,6 @@
     "assignees": [
       "G"
     ],
-    "status": "in_progress"
+    "status": "done"
   }
 ]
