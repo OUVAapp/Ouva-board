@@ -767,5 +767,21 @@
       "G"
     ],
     "status": "done"
+  },
+  {
+    "id": "FEAT-011",
+    "title": "Refonte système de notifications (i18n, target, deleted)",
+    "desc": "Notifications structurées (action, item_title, event_title, actor_name, target, is_item_deleted). Messages construits côté front (i18n). Navigation vers vues spécifiques (expenses/balance). Gestion items supprimés. Spec: ouva/tickets/FEAT-011/spec.md",
+    "tags": [
+      "feat",
+      "api",
+      "web",
+      "mobile",
+      "p1"
+    ],
+    "assignees": [
+      "G"
+    ],
+    "status": "in_progress"
   }
 ]
