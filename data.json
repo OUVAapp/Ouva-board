@@ -728,14 +728,16 @@
   },
   {
     "id": "BUG-020",
-    "title": "Dates activité web pas sauvegardées",
-    "desc": "Sur le site web, les modifications de dates dans l'onglet activité ne s'enregistrent pas. Bug BLOQUANT. Rapporté par Debra le 27/03. Feedback ID: BUG-017.",
+    "title": "Dates activité mobile pas sauvegardées",
+    "desc": "Sur l'app mobile, les modifications de dates dans l'onglet activité ne s'enregistrent pas. Bug BLOQUANT. Rapporté par Debra le 27/03.",
     "tags": [
       "bug",
-      "web",
+      "mobile",
       "p0"
     ],
-    "assignees": [],
+    "assignees": [
+      "J"
+    ],
     "status": "backlog"
   }
 ]
