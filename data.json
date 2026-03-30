@@ -739,5 +739,19 @@
       "J"
     ],
     "status": "backlog"
+  },
+  {
+    "id": "BUG-021",
+    "title": "Web: modifier article/sous-tâche décoche + pas d'édition inline",
+    "desc": "Sur l'app web, cliquer sur un article de liste de courses ou une sous-tâche pour le modifier le décoche (toggle checkbox). Pas d'édition inline comme sur mobile. Aligner l'UX web sur mobile: checkbox séparé du label, possibilité d'éditer le texte/quantité inline sans décocher.",
+    "tags": [
+      "bug",
+      "web",
+      "p1"
+    ],
+    "assignees": [
+      "G"
+    ],
+    "status": "in_progress"
   }
 ]
