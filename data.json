@@ -144,11 +144,10 @@
     "tags": [
       "bug",
       "mobile",
-      "p2",
-      "needs-info"
+      "p2"
     ],
     "assignees": [],
-    "status": "backlog"
+    "status": "done"
   },
   {
     "id": "BUG-016",
@@ -783,5 +782,19 @@
       "G"
     ],
     "status": "in_progress"
+  },
+  {
+    "id": "FEAT-FB-018",
+    "title": "Clavier numérique pour saisie dépenses",
+    "desc": "Afficher uniquement le clavier numérique (pas lettres) pour la saisie/modification de montants dépenses. Fix simple : keyboardType numberWithOptions(decimal: true). Lié à BUG-017 (virgule vs point) — fixer ensemble. WSJF 4.0. Rapporté par Gérard le 30/03.",
+    "tags": [
+      "feat",
+      "mobile",
+      "p2"
+    ],
+    "assignees": [
+      "J"
+    ],
+    "status": "backlog"
   }
 ]
