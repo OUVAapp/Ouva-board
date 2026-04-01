@@ -796,5 +796,19 @@
       "J"
     ],
     "status": "backlog"
+  },
+  {
+    "id": "BUG-023",
+    "title": "App hors connexion : empty state trompeur + page blanche persistante",
+    "desc": "Hors connexion, la home affiche le CTA créer event au lieu d'un message erreur réseau. Au retour de connexion, la page reste blanche — il faut kill + restart l'app. Analyse: home_page.dart ne distingue pas failure vs empty, pas de retry auto quand connexion revient. Fix: ajouter état erreur réseau + connectivity listener.",
+    "tags": [
+      "bug",
+      "mobile",
+      "p0"
+    ],
+    "assignees": [
+      "J"
+    ],
+    "status": "todo"
   }
 ]
