@@ -203,13 +203,15 @@
   {
     "id": "FEAT-FB-008",
     "title": "Champ lien internet sur activités",
-    "desc": "Lien vers le site de l'activité directement dans l'app — WSJF 3.0",
+    "desc": "Lien vers le site de l'activité directement dans l'app — WSJF 3.0. À traiter avec FEAT-UX-CREATE (refonte UX création d'items).",
     "tags": [
       "feat",
       "mobile",
       "p2"
     ],
-    "assignees": [],
+    "assignees": [
+      "J"
+    ],
     "status": "backlog"
   },
   {
@@ -283,7 +285,7 @@
       "p2"
     ],
     "assignees": [],
-    "status": "backlog"
+    "status": "done"
   },
   {
     "id": "FEAT-FB-005",
@@ -709,7 +711,7 @@
     "assignees": [
       "J"
     ],
-    "status": "todo"
+    "status": "done"
   },
   {
     "id": "BUG-INT-002",
@@ -795,7 +797,7 @@
     "assignees": [
       "J"
     ],
-    "status": "backlog"
+    "status": "done"
   },
   {
     "id": "BUG-018",
@@ -844,6 +846,34 @@
       "bug",
       "web",
       "p0"
+    ],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
+    "id": "FEAT-CRASHLYTICS",
+    "title": "Ajouter Crashlytics",
+    "desc": "Intégrer Firebase Crashlytics dans l’app mobile pour remonter les crashes, exceptions non catchées et erreurs Flutter/Dart en dev/prod avec un setup propre par environnement.",
+    "tags": [
+      "feat",
+      "mobile",
+      "infra",
+      "p2"
+    ],
+    "assignees": [
+      "J"
+    ],
+    "status": "done"
+  },
+  {
+    "id": "FEAT-FB-020",
+    "title": "Voir qui a rejoint le voyage sur l’appli",
+    "desc": "Voir qui a bien rejoint / accepté le voyage directement dans l'app. Besoin de visibilité sur le statut d'inscription des participants. WSJF 3.0.",
+    "tags": [
+      "feat",
+      "mobile",
+      "api",
+      "p1"
     ],
     "assignees": [],
     "status": "backlog"
