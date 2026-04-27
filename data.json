@@ -1,5 +1,19 @@
 [
   {
+    "id": "FEAT-EVENT-CHAT",
+    "title": "Conversation par événement orientée action",
+    "desc": "Ajouter une conversation par event avec messages texte, partage d'items Ouva (tâches, activités, dépenses, sondages, transports, logements), actions rapides, notifications deep-linkées, et base unread/read. WSJF 3.0. Voir spec: tickets/FEAT-EVENT-CHAT/spec.md",
+    "tags": [
+      "feat",
+      "mobile",
+      "api",
+      "web",
+      "p1"
+    ],
+    "assignees": [],
+    "status": "backlog"
+  },
+  {
     "id": "BUG-005",
     "title": "Notif rappel event → page blanche",
     "desc": "Clic sur notif rappel d'event ouvre une page blanche — deep linking Android — ROOT CAUSE: Navigation helper sans timeout + stack push cassé + cold start non géré",
