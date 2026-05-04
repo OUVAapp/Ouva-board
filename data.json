@@ -891,5 +891,17 @@
     ],
     "assignees": [],
     "status": "backlog"
+  },
+  {
+    "id": "FEAT-FB-021",
+    "title": "Dépenses : mettre un séparateur de milliers",
+    "desc": "Dépenses : mettre un séparateur de milliers WSJF 4.0. Rendre les montants plus lisibles",
+    "tags": [
+      "feat",
+      "mobile",
+      "p1"
+    ],
+    "assignees": [],
+    "status": "backlog"
   }
 ]
